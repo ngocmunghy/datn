@@ -1,0 +1,109 @@
+<%- include('../Includes/begin.ejs') %>
+<%- include('../Includes/staff_nav.ejs') %>
+
+<section id="content-wrapper">
+    <main role="main" class="pt-5 main">
+
+        <div class="main-content">
+            <div class="header pb-4 pb-sm-8 pt-5 pt-lg-8 d-flex align-items-center"
+                style="height: 100px; background-size: cover; background-position: center top;">
+            </div>
+            <div class="container-fluid mt--7">
+                <div class="row">
+                    <div class="col-xl-12 order-xl-1">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">                           
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="heading-small text-muted mb-4">Fill question form</h6>
+                                <form action="/staff/question-management/class/<%=classId %>/editQuestion/<%=questionData.q_id%>" method="POST">
+                                    <!-- Question -->
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="question">
+                                            Question
+                                        </label>
+                                        <input type="text" id="question" name="question"
+                                                                class="form-control form-control-alternative"
+                                                                value="<%=questionData.question%>" required>
+                                    </div>
+                                    <hr class="my-4">
+
+                                    <!-- Option 1 -->
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="opt1">
+                                            Option 1
+                                        </label>
+                                        <input type="text" id="opt1" name="opt1"
+                                                                class="form-control form-control-alternative"
+                                                                value="<%=questionData.opt1%>" required>
+                                    </div>
+                                    <hr class="my-4">
+
+                                    <!-- Option 2 -->
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="opt2">
+                                            Option 2
+                                        </label>
+                                        <input type="text" id="opt2" name="opt2"
+                                                                class="form-control form-control-alternative"
+                                                                value="<%=questionData.opt2%>" required>
+                                    </div>
+                                    <hr class="my-4">
+
+                                    <!-- Option 3 -->
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="opt3">
+                                            Option 3
+                                        </label>
+                                        <input type="text" id="opt3" name="opt3"
+                                                                class="form-control form-control-alternative"
+                                                                value="<%=questionData.opt3%>" required>
+                                    </div>
+                                    <hr class="my-4">
+
+                                    <!-- Option 4 -->
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="opt4">
+                                            Option 4
+                                        </label>
+                                        <input type="text" id="opt4" name="opt4"
+                                                                class="form-control form-control-alternative"
+                                                                value="<%=questionData.opt4%>" required>
+                                    </div>
+                                    <hr class="my-4">
+
+                                    <!-- Answer -->
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="ans">
+                                            Answer
+                                        </label>
+                                        <input type="text" id="ans" name="ans" maxlength="1"
+                                            class="form-control form-control-alternative"
+                                            value="<%=questionData.answer%>" required>
+                                    </div>
+                                    <hr class="my-4">
+                                    
+                                    <button type="submit" class="btn btn-primary btn-block">Edit
+                                        Question</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+</section>
+
+
+
+<%- include('../Includes/staff_end.ejs') %>
